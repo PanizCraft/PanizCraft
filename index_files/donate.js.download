@@ -1,0 +1,2 @@
+// Pop-up
+function donate() { var myWindow = window.open("https://coffeebede.com/tiamo","","width=450,height=675"); }

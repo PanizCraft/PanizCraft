@@ -1,197 +1,492 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paniz Craft</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <nav class="desktop_navbar">
-      <!-- <a href="#"><img class="desktop_navbar_logo_img" src="img/logo_small.jpg" alt="logo"></a> -->
-      <a href="/Rules/index.html" class="desktop_navbar_link">Rules</a>
-      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="#join" class="desktop_navbar_link2 scroll">Ip</a>
-      </div>
-    </nav>
-    <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="img/logo_small.jpg" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://wiki.example.com/">Wiki</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
-    </div>
-    <div class="mainflex">
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="img/logo.jpg" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>Welcome To<br></a>
-          <a class="main1_actcent">Paniz Craft Server</a>
-        </div>
-        <div class="main1_ipcopier_div">
-          <button class="main1_ipcopier" onclick="copyText()" type="button">
-            <span class="main1_ipcopier_text1">PanizCraft.ir</span>
-            <br>
-            <span class="main1_ipcopier_text2">Click to copy</span>
-          </button>
-          <script>
-            function copyText() {
-                navigator.clipboard.writeText
-            ("PanizCraft.ir");
-                }
-            $(document).ready(function() {
-            $('.main1_ipcopier').click(function() {
-                var popup = $('<div>', { class: 'main1_popup' })
-                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
-                $(this).after(popup);
-                setTimeout(function() {
-                popup.remove();
-                }, 1000);
-            });
-            });
-        </script>
-        </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="img/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
-      </div>
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">Update List</a>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Update 1" src="img/lobby.png">
-            <a class="main2_feature_headline">Lobby Server</a>
-            <a class="main2_feature_text">Lobby Created <br> Plugin Added & Configed</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Update 2" src="img/auth.jpg">
-            <a class="main2_feature_headline">Auth Server</a>
-            <a class="main2_feature_text">Auth Created <br> Plugin Added & Configed</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Update 3" src="img/survival.jpg">
-            <a class="main2_feature_headline">Survival Server</a>
-            <a class="main2_feature_text">Survival Created <br> Plugin Added & Configed</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Update 4" src="img/soon.jpg">
-            <a class="main2_feature_headline">Soon !</a>
-            <a class="main2_feature_text">This Update Is Soon Is Comm</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Update 5" src="img/soon.jpg">
-            <a class="main2_feature_headline">Soon !</a>
-            <a class="main2_feature_text">This Update Is Soon Is Comm</a>
-          </div>
-        </div>
-      </div>
-      <div id="discord"></div>
-      <div class="main4">
-        <a class="headline">Join Discord</a>
-        <div class="main4_dc_div">
-          <iframe class="main4_dc_widget" src="img/discord.jpg" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">Join !</a>
-            <a class="main4_dc_description"> ・Talk With Other Player<br> ・Ask Quest<br> ・Update Notif <br> ・Voting<br>  ・And Other ....</a>
-            <a href="https://discord.gg/invite/QNb6CgGDc7" class="main4_dc_button_a">
-              <div class="main4_dc_button">Join</div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">Staff</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="img/owner.png">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">Rank : Owner</a>
-              <a class="main5_admins_description_title" href="/soon.html">Foad</a>
-              <a class="main5_admins_description, main5_admins_description_title"><br>Salam Esm Man Foad Man Founder Paniz Craft Hastam Khosbaktam !</a>
-            </div>
-          </div>
-    <br>
-    <br>
-    <br>
-          </div>
-        </div>
-      </div>
-      <div id="join"></div>
-      <div class="main3">
-        <a class="headline">Ip :</a>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <a class="main3_join_title">Java</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>IP:</a>
-                <a>Version:</a>
-              </div>
-              <div class="main3_join_values">
-                <a>PanizCraft.ir</a>
-                <a>1.8 To 1.20</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">Bedrock</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>IP:</a>
-                <a>Port:</a>
-              </div>
-              <div class="main3_join_values">
-                <a>Soon!</a>
-                <a>Soon!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="copyright_div">
-      <a href="https://wl-std.com" target="_blank" class="copyright">©️ All CopyRights Resaved By Wl-Std.com</a>
+<!-- saved from url=(0040)https://pooriya.wl-std.com/#cv_biography -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<link rel="icon" type="image/png" href="./index_files/Untitled.png">
+  <link href="./index_files/Untitled.png" rel="shortcut icon">
+  
 
-    </footer>
-  </body>
-</html>
+<meta name="description" content="🪐 I&#39;m ♡
+
+💻 Im Front/Back-end Developer
+💜 I Like Rap Music&#39;s">
+
+  <meta name="author" content="Pooriya">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="./index.html">
+<meta property="og:title" content="Foad Personal Website">
+<meta property="og:description" content="🪐 I&#39;m ♡
+
+💻 Im Front/Back-end Developer
+💜 I Like Rap Music&#39;s">
+<meta property="og:image" content="https://cdn.wl-std.ir/images/personal-image.webp">
+<meta name="theme-color" content="#05ff93">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://pooriya.wl-std.com/">
+<meta property="twitter:title" content="Pooriya Personal Website">
+<meta property="twitter:description" content="🪐 I&#39;m ♡
+
+💻 Im Front/Back-end Developer
+💜 I Like Rap Music&#39;s">
+<meta property="twitter:image" content="https://cdn.wl-std.ir/images/personal-image.webp">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Foad</title>
+
+<!-- Google Fonts -->
+
+
+<style type="text/css">@font-face {font-family:Jost;font-style:normal;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:normal;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:100;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:200;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:300;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:400;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:500;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:600;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:700;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:800;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/latin-ext/wght/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Jost;font-style:italic;font-weight:900;src:url(/cf-fonts/v/jost/5.0.16/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+<!-- /Google Fonts -->
+
+<!-- Styles -->
+<link type="text/css" rel="stylesheet" href="./index_files/base.css">
+<link type="text/css" rel="stylesheet" href="./index_files/magnific.css">
+<link type="text/css" rel="stylesheet" href="./index_files/animated-headlines.css">
+<link type="text/css" rel="stylesheet" href="./index_files/style.css">
+<link type="text/css" rel="stylesheet" href="./index_files/end_load.css">
+<!-- /Styles -->
+<script src="./index_files/jquery.min.js.download"></script>
+</head>
+
+<body class="resume-opened" style="overflow: unset;">
+
+<div class="deebo_fn_main">
+			
+
+			
+	<!-- Light/Dark Switcher -->
+	<!-- <div class="deebo_fn_switcher_wrap">
+		<label>
+			<span class="light">Light</span>
+				<span class="checkbox_wrap">
+					<input type="checkbox" id="skin_switcher" checked>
+					<span class="slider round"></span>
+				</span>
+			<span class="dark">Dark</span>
+		</label>
+	</div> -->
+	<!-- /Light/Dark Switcher -->
+	
+	
+	<!-- Overlay -->
+	<div class="right_bar_overlay"></div>
+	<!--/ Overlay -->
+
+	<!-- MODALBOX -->
+	<div class="deebo_fn_modalbox">
+		<a class="extra_closer" href="./index.html"></a>
+		<div class="box_inner">
+			<a class="closer" href="./index.html"><span></span></a>
+			<div class="modal_content">
+
+				<div class="modal_in">
+					<!-- Content comes from JS -->
+				</div>
+
+				<div class="fn__nav" data-from="" data-index="">
+					<a href="./index.html" class="prev">
+						<span class="text">Prev</span>
+						<span class="arrow_wrapper"><span class="arrow"></span></span>
+					</a>
+					<a href="./index.html" class="next">
+						<span class="text">Next</span>
+						<span class="arrow_wrapper"><span class="arrow"></span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MODALBOX --> 
+
+	<!-- Overlay -->
+	<div class="right_bar_overlay"></div>
+	<!--/ Overlay -->
+
+	<!-- MODALBOX -->
+	<div class="deebo_fn_modalbox">
+		<a class="extra_closer" href="./index.html"></a>
+		<div class="box_inner">
+			<a class="closer" href="./index.html"><span></span></a>
+			<div class="modal_content">
+
+				<div class="modal_in">
+					<!-- Content comes from JS -->
+				</div>
+
+				<div class="fn__nav" data-from="" data-index="">
+					<a href="./index.html" class="prev">
+						<span class="text">Prev</span>
+						<span class="arrow_wrapper"><span class="arrow"></span></span>
+					</a>
+					<a href="./index.html" class="next">
+						<span class="text">Next</span>
+						<span class="arrow_wrapper"><span class="arrow"></span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MODALBOX --> 
+
+	<!-- Modal CV Card -->
+	<div class="deebo_fn_cv">
+
+		<!-- CV Inner -->
+		<div class="deebo_fn__cv">
+
+			<!-- CV Background -->
+			<div class="cv__bg"></div>
+			<div class="cv__bg2"></div>
+			<!-- /CV Background -->
+
+			<!-- CV Left Side -->
+			<div class="cv__header">
+				<div class="in">
+					<div class="avatar">
+						<img src="./index_files/Untitled.png" alt="profile" width="500" height="500">
+					</div>
+					<h3><span>Foad</span>   Sh</h3>
+					<p class="quote">🪐 I'm ♡<br>💻 Im Front-end Developer<br>💜 I Like Rap Music's</p>
+					<ul class="contact_info">
+
+						<li>
+							<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 399.997 399.997" xml:space="preserve" class="fn__svg replaced-svg">
+<g>
+	<g>
+		<g>
+			<path d="M366.684,24.971H33.316C14.945,24.971,0,39.917,0,58.288V275.56c0,18.371,14.945,33.317,33.316,33.317h107.412     l-20.387,44.955c-2.105,4.643-1.709,10.037,1.053,14.321c2.762,4.285,7.51,6.873,12.607,6.873h131.996c0.006,0,0.014,0,0.02,0     c8.285,0,15-6.715,15-15c0-2.493-0.605-4.848-1.686-6.916l-20.062-44.233h107.412c18.371,0,33.316-14.946,33.316-33.317V58.288     C400,39.917,385.055,24.971,366.684,24.971z M370,275.561c0,1.829-1.488,3.316-3.316,3.316H33.316     c-1.828,0-3.316-1.487-3.316-3.316V58.288c0-1.829,1.488-3.317,3.316-3.317h333.367c1.828,0,3.316,1.488,3.316,3.317L370,275.561     L370,275.561z"></path>
+			<path d="M246.198,96.434c-1.057-1.056-2.921-0.9-4.166,0.344l-16.273,16.271c-1.247,1.247-1.4,3.116-0.348,4.171l23.103,23.103     c0.525,0.526,1.261,0.751,2.013,0.688c0.756-0.063,1.53-0.413,2.157-1.038l16.271-16.272c1.244-1.245,1.4-3.111,0.343-4.166     L246.198,96.434z"></path>
+			<path d="M146.336,197.582c-0.684-0.684-1.748-0.882-2.791-0.523c-1.042,0.359-1.902,1.226-2.257,2.271l-11.118,32.934     c-0.353,1.037-0.148,2.089,0.532,2.768c0.512,0.517,1.24,0.759,2.011,0.693c0.248-0.021,0.503-0.073,0.756-0.16l32.934-11.12     c1.044-0.354,1.912-1.215,2.27-2.256c0.362-1.041,0.162-2.107-0.521-2.792L146.336,197.582z"></path>
+			<path d="M229.504,182.228c1.451-0.662,2.51-1.965,2.859-3.519c0.35-1.555-0.047-3.185-1.071-4.405     c-1.92-2.283-3.929-4.604-5.997-6.941l18.078-18.077c0.596-0.597,0.972-1.375,1.033-2.157c0.065-0.779-0.185-1.505-0.689-2.01     l-23.104-23.101c-1.056-1.058-2.92-0.903-4.166,0.344l-17.63,17.633c-11.824-11.209-23.699-21.209-34.165-28.732     c-7.369-5.296-20.85-14.199-28.355-14.313c-1.37-0.024-2.695,0.512-3.668,1.479c-0.976,0.966-1.519,2.285-1.508,3.657     c0.039,5.114,4.528,14.341,12.639,25.977c7.72,11.075,18.326,23.802,30.426,36.563l-23,23.002     c-1.248,1.247-1.403,3.111-0.346,4.166l23.103,23.101c0.525,0.531,1.254,0.755,2.011,0.691c0.752-0.063,1.533-0.414,2.155-1.035     l23.446-23.447c2.047,1.811,4.077,3.571,6.079,5.268c0.929,0.787,2.097,1.209,3.296,1.209c0.271,0,0.543-0.022,0.815-0.065     c1.471-0.239,2.765-1.109,3.539-2.383c1.368-2.248,3.15-4.479,5.301-6.626C223.281,185.806,226.284,183.693,229.504,182.228z"></path>
+			<path d="M242.292,186.495c-5.938,0-11.606,2.531-16.396,7.32c-5.748,5.748-8.257,11.777-7.257,17.438     c0.993,5.604,5.446,10.627,12.22,13.771c5.827,2.707,11.138,3.546,15.821,4.287c4.932,0.778,9.585,1.516,13.726,4.325     c0.857,0.585,1.859,0.882,2.864,0.882c0.706,0,1.415-0.146,2.079-0.444c1.613-0.719,2.74-2.225,2.977-3.977     c1.775-13.241-0.765-25.133-7.152-33.476C256.245,190.186,249.363,186.495,242.292,186.495z"></path>
+		</g>
+	</g>
+</g>
+</svg></span>
+							<p><a style="text-decoration: none; color: #00ffb8;" href="./index.html">Soon!</a></p>
+						</li>
+						<li>
+							<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="511.626px" height="511.626px" viewBox="0 0 511.626 511.626" style="enable-background:new 0 0 511.626 511.626;" xml:space="preserve" class="fn__svg replaced-svg">
+<g>
+	<g>
+		<path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099    c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277    c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569    c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852    c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116    c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679    c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974    C26.169,159.743,37.307,170.736,49.106,178.729z"></path>
+		<path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699    c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287    c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699    c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265    c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265    V184.437C503.441,193.569,493.927,201.854,483.072,209.275z"></path>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></span>
+							<p>foadmaster64@gmail.com</p>
+						</li>
+						
+
+					</ul>
+					<ul class="social">
+						<li>
+							<a href="" target="_blank" title="twitch.tv">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" class="fn__svg replaced-svg">
+<title>twitch</title>
+<path d="M26.711 14.929l-4.284 4.284h-4.285l-3.749 3.749v-3.749h-4.82v-16.067h17.138zM8.502 1.004l-5.356 5.356v19.279h6.427v5.356l5.356-5.356h4.284l9.641-9.64v-14.996zM21.356 6.895h2.142v6.427h-2.142zM15.464 6.895h2.143v6.427h-2.144z"></path>
+</svg>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank" title="spotify.com">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" class="fn__svg replaced-svg">
+<title>spotify</title>
+<path d="M24.849 14.35c-3.206-1.616-6.988-2.563-10.991-2.563-2.278 0-4.484 0.306-6.58 0.881l0.174-0.041c-0.123 0.040-0.265 0.063-0.412 0.063-0.76 0-1.377-0.616-1.377-1.377 0-0.613 0.401-1.132 0.954-1.311l0.010-0.003c5.323-1.575 14.096-1.275 19.646 2.026 0.426 0.258 0.706 0.719 0.706 1.245 0 0.259-0.068 0.502-0.186 0.712l0.004-0.007c-0.29 0.345-0.721 0.563-1.204 0.563-0.273 0-0.529-0.070-0.752-0.192l0.008 0.004zM24.699 18.549c-0.201 0.332-0.561 0.55-0.971 0.55-0.225 0-0.434-0.065-0.61-0.178l0.005 0.003c-2.739-1.567-6.021-2.49-9.518-2.49-1.925 0-3.784 0.28-5.539 0.801l0.137-0.035c-0.101 0.032-0.217 0.051-0.337 0.051-0.629 0-1.139-0.51-1.139-1.139 0-0.509 0.333-0.939 0.793-1.086l0.008-0.002c1.804-0.535 3.878-0.843 6.023-0.843 3.989 0 7.73 1.064 10.953 2.925l-0.106-0.056c0.297 0.191 0.491 0.52 0.491 0.894 0 0.227-0.071 0.437-0.192 0.609l0.002-0.003zM22.899 22.673c-0.157 0.272-0.446 0.452-0.777 0.452-0.186 0-0.359-0.057-0.502-0.154l0.003 0.002c-2.393-1.346-5.254-2.139-8.299-2.139-1.746 0-3.432 0.261-5.020 0.745l0.122-0.032c-0.067 0.017-0.145 0.028-0.224 0.028-0.512 0-0.927-0.415-0.927-0.927 0-0.432 0.296-0.795 0.696-0.898l0.006-0.001c1.581-0.47 3.397-0.74 5.276-0.74 3.402 0 6.596 0.886 9.366 2.44l-0.097-0.050c0.302 0.15 0.506 0.456 0.506 0.809 0 0.172-0.048 0.333-0.132 0.469l0.002-0.004zM16 1.004c0 0 0 0-0 0-8.282 0-14.996 6.714-14.996 14.996s6.714 14.996 14.996 14.996c8.282 0 14.996-6.714 14.996-14.996v0c-0.025-8.272-6.724-14.971-14.993-14.996h-0.002z"></path>
+</svg>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank" title="instagram.com">
+								<svg xmlns="http://www.w3.org/2000/svg" height="511pt" viewBox="0 0 511 511.9" width="511pt" class="fn__svg replaced-svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank" title="github.com">
+								<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 48 48" class="fn__svg replaced-svg">
+  <title>github</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="invisible_box" data-name="invisible box">
+      <rect width="48" height="48" fill="none"></rect>
+      <rect width="48" height="48" fill="none"></rect>
+    </g>
+    <g id="icons_Q2" data-name="icons Q2">
+      <path d="M24,1.9a21.6,21.6,0,0,0-6.8,42.2c1,.2,1.8-.9,1.8-1.8V39.4c-6,1.3-7.9-2.9-7.9-2.9a6.5,6.5,0,0,0-2.2-3.2C6.9,31.9,9,32,9,32a4.3,4.3,0,0,1,3.3,2c1.7,2.9,5.5,2.6,6.7,2.1a5.4,5.4,0,0,1,.5-2.9C12.7,32,9,28,9,22.6A10.7,10.7,0,0,1,11.9,15a6.2,6.2,0,0,1,.3-6.4,8.9,8.9,0,0,1,6.4,2.9,15.1,15.1,0,0,1,5.4-.8,17.1,17.1,0,0,1,5.4.7,9,9,0,0,1,6.4-2.8,6.5,6.5,0,0,1,.4,6.4A10.7,10.7,0,0,1,39,22.6C39,28,35.3,32,28.5,33.2a5.4,5.4,0,0,1,.5,2.9v6.2a1.8,1.8,0,0,0,1.9,1.8A21.7,21.7,0,0,0,24,1.9Z"></path>
+    </g>
+  </g>
+</svg>
+							</a>
+						</li>
+						<li>
+							<a href="" target="_blank" title="youtube.com">
+								<svg xmlns="http://www.w3.org/2000/svg" height="682pt" viewBox="-21 -117 682.66672 682" width="682pt" class="fn__svg replaced-svg"><path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"></path></svg>
+							</a>
+						</li>
+						<li>
+							<a href="" onclick="donate()" target="_blank" title="Donite me !">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 122.88 102.36" style="enable-background:new 0 0 122.88 102.36" xml:space="preserve" class="fn__svg replaced-svg"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M29.83,89.55V52.63h16.61c7.04,1.26,14.08,5.08,21.12,9.51h12.9c5.84,0.35,8.9,6.27,3.22,10.16 c-4.52,3.32-10.49,3.13-16.61,2.58c-4.22-0.21-4.4,5.46,0,5.48c1.53,0.12,3.19-0.24,4.64-0.24c7.64-0.01,13.92-1.47,17.77-7.5 l1.93-4.51l19.19-9.51c9.6-3.16,16.42,6.88,9.35,13.87c-13.9,10.11-28.15,18.43-42.73,25.15c-10.59,6.44-21.18,6.22-31.76,0 L29.83,89.55L29.83,89.55z M76.08,7.8c3.63-3.79,6.17-7.06,11.77-7.7c10.5-1.21,20.16,9.55,14.86,20.14 c-1.51,3.02-4.58,6.6-7.98,10.12c-3.73,3.86-7.86,7.65-10.76,10.52l-7.89,7.83l-6.52-6.28c-7.84-7.55-20.63-17.06-21.05-28.84 c-0.3-8.25,6.22-13.54,13.7-13.44C68.91,0.23,71.72,3.56,76.08,7.8L76.08,7.8L76.08,7.8z M0,49.08h24.83v44.18H0V49.08L0,49.08z"></path></g></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /CV Left Side -->
+
+			<!-- /CV Content Side -->
+			<div class="cv__content">
+				
+				<section id="hero-header" class="section_header">
+					<div class="content">
+						<div class="left_hero_header">
+							<div class="circle">
+								<div class="bg_img" data-bg-img="img/header/profile2.webp" style="background-image: url(&quot;img/header/profile2.webp&quot;);"></div>
+								<img src="./index_files/square.jpg" alt="">
+								<div class="circle_holder_blue"><span></span></div>
+								<div class="circle_holder_orange"><span></span></div>
+								<div class="lines">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="right_hero_header">
+							<div class="my_self">
+								<h4>Hello! I'm a</h4>
+								<h2>
+									<span class="cd-headline clip">
+										<span class="cd-words-wrapper" style="width: 2px; overflow: hidden;">
+										  <b class="is-hidden">Developer</b>
+										  <b class="is-hidden">Streamer</b>
+										  <b class="is-visible">Designer</b>
+										</span>
+									</span>
+								</h2>
+								<a style="text-decoration: none;" href=""><h3 style="margin-left: 4rem; margin-top: 5rem;" class="shake">Scroll to Down <img style="width: 60px; color: #00ffb8 !important;" src="./index_files/down-arrow2-svgrepo-com.svg" alt=""></h3></a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- CV: Biography Section -->
+				<section id="cv_biography">
+					<div class="section_title">
+						<h3>About Me</h3>
+					</div>
+					<p>🍃  I'm ♡<br>🥂  Type: ENFJ-T<br>⭐ Website : <a style="text-decoration: none; color: #00ffb8;" class="wtlink" href="https://wl-std.com/">wild-life-studio</a> <br>⚙️ Im Front-end Developer<br>🎵 I Like Lo-Fi And Rap Music's</p><p class="leader20">🧑‍💻I'm leader of development team
+					</p><div class="fn_cs_info_items">
+						<ul>
+							<li><p>Languages: <span>English, Persian, Turkey</span></p></li>
+							<li><p>Age: <span>17 Years</span></p></li>
+							<li><p>Nationality: <span>Iranian</span></p></li>
+							<li><p>Email: <span><a style="color:#00ffb8;" href="mailto:foadmaster64@gmail.com">foadmaster64@wl-std.com</a></span></p></li>
+						</ul>
+					</div>
+				</section>
+
+<style>
+	    .skill-progress{width:100%;float:left;height:12px;border-radius:2px;color:#d4d4d4;margin:5px 0;cursor:help}.skill-progress::-webkit-progress-bar{background-color:#013f31;border-radius:2px;transition:.5s}.skill-progress::-webkit-progress-value{background-color:#00ca8765;border-top-left-radius:2px;border-bottom-left-radius:2px}.skill-progress::-moz-progress-value{background-color:#00ffb8;border-top-left-radius:2px;border-bottom-left-radius:2px}.skill-progress::-moz-progress-bar{background-color:#00a37d;border-radius:2px}
+</style>
+				<!-- CV: Skills Section -->
+				<section id="cv_skills">
+					<div class="section_title">
+						<h3>My Skills</h3>
+					</div>
+			    	
+					<div class="fn_cs_progress_bar">
+						<div class="progress_item open" data-value="99">
+							<div class="item_in">
+								<h3 class="progress_title">HTML5 &amp; CSS3</h3>
+								<progress class="skill-progress" value="99" max="100" title="99%">99%</progress>
+
+							</div>
+						</div>
+						<div class="progress_item open" data-value="95">
+							<div class="item_in">
+								<h3 class="progress_title">JavaScript</h3>
+								<progress class="skill-progress" value="95" max="100" title="95%">95%</progress>
+
+							</div>
+						</div>
+
+						<div class="progress_item open" data-value="36">
+							<div class="item_in">
+								<h3 class="progress_title">C#</h3>
+								<progress class="skill-progress" value="36" max="100" title="36%">36%</progress>
+							</div>
+						</div>
+
+						<div class="progress_item open" data-value="42">
+							<div class="item_in">
+								<h3 class="progress_title">PHP</h3>
+								<progress class="skill-progress" value="42" max="100" title="42%">42%</progress>
+							</div>
+						</div>
+
+						<div class="progress_item open" data-value="79">
+							<div class="item_in">
+								<h3 class="progress_title">Python</h3>
+								<progress class="skill-progress" value="79" max="100" title="79%">79%</progress>
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!-- /CV: Skills Section -->
+
+
+
+
+
+
+	
+
+</div>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch(function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+    }
+  </script>
+<script>
+	function hide_loading() {
+  const link = document.createElement('link');
+  link.href = 'assets/style/end_load.css';
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.media = 'screen';
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+window.onload = hide_loading;
+</script>
+<div id="loading" style="opacity: 0; display: none; visibility: hidden; z-index: -1;">
+  <div class="box" style="text-align: center;">
+	<div class="load-box">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com/license, Copyright 2022 Fonticons, Inc.<path d="M288 16C288 7.164 295.2 0 304 0C445.4 0 560 114.6 560 256C560 302.6 547.5 346.4 525.7 384C521.3 391.7 511.5 394.3 503.9 389.9C496.2 385.4 493.6 375.7 498 368C517.1 335.1 528 296.8 528 256C528 132.3 427.7 32 304 32C295.2 32 288 24.84 288 16H288z"/></svg> -->
+    <img width="70px" alt=""></div>
+    <p>Loading</p>
+</div>
+  </div>
+
+<style>
+#loading{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  z-index: 555;
+  cursor: default;
+  user-select: none;
+}
+#loading .box{
+  width: 175px;
+  height: 130px;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(179, 179, 179, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes load {
+  0%{transform: translateY(-5px); filter: hue-rotate(0deg);}
+  70%{transform: translateY(5px); filter: hue-rotate(175deg);}
+  100%{transform: translateY(-5px); filter: hue-rotate(0deg);}
+}
+#loading .box .load-box{
+  display: block;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  background-image: url(https://cdn.wl-std.ir/assets/image/project/pl16.webp);
+  background-size: cover;
+  transition: 2s;
+  animation: load 3.5s ease .3s forwards infinite;
+}
+#loading .box p{
+  width: fit-content;
+  text-align: center;
+  margin: 12px auto 7px;
+  font-family: mulish-1;
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.5px; 
+}
+</style>
+<!-- Scripts -->
+<script type="text/javascript" src="./index_files/jquery.js.download"></script>
+<script type="text/javascript" src="./index_files/isotope.js.download"></script>
+<script type="text/javascript" src="./index_files/magnific.js.download"></script>
+<script type="text/javascript" src="./index_files/animated-headlines.js.download"></script>
+<script type="text/javascript" src="./index_files/waypoints.js.download"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+<script type="text/javascript" src="./index_files/init.js.download"></script>
+<script src="./index_files/donate.js.download"></script>
+<script>
+	var counterContainer = document.querySelector(".website-counter");
+	var visitCount = localStorage.getItem("page_view");
+	
+	// Check if page_view entry is present
+	if (visitCount) {
+	  visitCount = Number(visitCount) + 1;
+	  localStorage.setItem("page_view", visitCount);
+	} else {
+	  visitCount = 1;
+	  localStorage.setItem("page_view", 1);
+	}
+	counterContainer.innerHTML = visitCount;
+  
+		</script>
+<!-- /Scripts -->
+<script>let loading=document.getElementById("loading"),body=document.getElementsByTagName("body");function closeLoading(){loading.style.opacity=0,setTimeout(function(){loading.style.display="none",loading.style.visibility="hidden",loading.style.zIndex=-1},1e3),setTimeout(function(){body[0].style.overflow="unset"},600)}window.onload=closeLoading;</script>
+<script defer="" src="./index_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;8e263c06dcedbb73&quot;,&quot;version&quot;:&quot;2024.10.5&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;f693b703ed1c45b2a0cc67f80eaafa4f&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}}}" crossorigin="anonymous"></script>
+
+<script src="./index_files/disable-rightclick.js.download"></script>
+
+
+</body></html>
