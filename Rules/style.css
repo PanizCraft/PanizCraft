@@ -1,0 +1,76 @@
+@font-face {
+    font-family: IranYekan;
+    src: url(fonts/iranyekanwebboldfanum.woff) format('woff');
+}
+
+body {
+
+    font-family: IranYekan;
+    background-color: rgb(14, 16, 17);
+    direction: rtl;
+    color: white;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px rgba(51,51,51,0.98);
+    color: #FF0000;
+
+}
+h3 {
+    color: rgb(242, 188, 24);
+    border: 1px 1px aliceblue;
+
+}
+h4{
+    color: brown;
+
+}
+
+.menu-rules{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+.menu-rules li{
+    float:right;    
+}
+.menu-rules li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+ .navigation li {
+    float:right;
+  }
+  
+  .navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #e59203;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #333;
+}
